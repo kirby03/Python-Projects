@@ -10,13 +10,16 @@
 # close to delte temp memory
 # myfile.close()
 
+import time
+
 with open('fruits.txt', "r+") as f:
     content = f.read()
     f.write("\n" + content + "\n" + content)
     content = f.seek(0)
     content2 = f.read()
-    print(content2)
-
+for contents in content2:
+    print(contents)
+    time.sleep(5)
 
 
 
